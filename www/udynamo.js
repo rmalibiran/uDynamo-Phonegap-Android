@@ -9,5 +9,8 @@ module.exports = {
     },
     cancelSwipe: function(successCallback, errorCallback) {
         cordova.exec(successCallback, errorCallback, "uDynamo", "cancelSwipe", []);
+    },
+    reconnectDevice: function(successCallback, errorCallback) {
+        cordova.exec(successCallback, errorCallback, "uDynamo", "reconnectDevice", []);
     }
 };

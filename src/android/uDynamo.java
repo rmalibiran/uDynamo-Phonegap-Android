@@ -93,6 +93,12 @@ public class uDynamo extends CordovaPlugin {
             } else {
                 pr = new PluginResult(PluginResult.Status.OK);
             }
+        } else if (action.equals("reconnectDevice")) {
+            closeDevice();
+
+            connectAudio();
+
+            pr = new PluginResult(PluginResult.Status.OK);
         }
 
         callbackContext.sendPluginResult(pr);
